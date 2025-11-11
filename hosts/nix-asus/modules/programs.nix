@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Programs configuration
@@ -17,14 +17,15 @@
       };
     };
 
-    
-
     # Enable and configure other programs as needed
     # Add more program configurations here as needed
+
+
+      # Fish shell configuration
+
   };
 
-
-  # Additional program-related configurations that don't fit under programs.*
+# Additional program-related configurations that don't fit under programs.*
   
   # Install packages that might help with Wayland/Mango compatibility
   environment.systemPackages = with pkgs; [
