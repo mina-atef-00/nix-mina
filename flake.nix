@@ -33,6 +33,7 @@
             users.mina = {
               # The home.stateVersion option does not have a default and must be set
               home.stateVersion = "25.05";
+              home.enableNixpkgsReleaseCheck = false;  # Disable version check due to HM/Nixpkgs version mismatch
               imports = [
                 mango.hmModules.mango
               ];
