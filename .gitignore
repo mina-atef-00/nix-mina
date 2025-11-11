@@ -1,0 +1,19 @@
+# NixOS build results
+result
+*.drv
+
+# Editor files
+*.swp
+*~
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+*.log
+
+# User-specific files
+.git-blame-ignore-revs
