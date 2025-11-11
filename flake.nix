@@ -13,7 +13,6 @@
         inherit nixpkgs-stable nixpkgs-unstable;
       };
       modules = [
-        ./hosts/nix-asus/hardware-configuration.nix
         ./hosts/nix-asus/configuration.nix
       ];
     };
