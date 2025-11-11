@@ -2,7 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # Stable packages from regular pkgs
     # Core utilities
     git
     wget
@@ -166,9 +165,6 @@
     ubuntu-sans
 
     # GNU FreeFont
-    # Example of using unstable packages (uncomment to use):
-    # pkgs.unstable.somePackage
-  ];
     freefont_ttf
 
     # WenQuanYi fonts (Chinese)
@@ -190,7 +186,9 @@
     nerd-fonts.hack
 
     inter
-  ];
+    # Example of using unstable packages (uncomment to use):
+    # pkgs.unstable.somePackage
+ ];
   
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
