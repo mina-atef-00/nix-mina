@@ -31,6 +31,8 @@
     direnv
     gvfs
     libinput
+    kitty
+    zellij
 
     # Development tools
     nodejs

@@ -8,6 +8,7 @@
     ./hardware/networking.nix
     ./hardware/keyboard.nix
     ./modules/packages.nix
+    ./modules/programs.nix
     ./modules/services.nix
     ./modules/users.nix
     ./modules/system.nix
