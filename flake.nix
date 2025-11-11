@@ -31,6 +31,8 @@
             useUserPackages = true;
             backupFileExtension = "backup";
             users.mina = {
+              # The home.stateVersion option does not have a default and must be set
+              home.stateVersion = "25.05";
               imports = [
                 mango.hmModules.mango
               ];
