@@ -31,5 +31,5 @@
   };
 
   # Timezone
-  time.timeZone = "UTC";
+  time.timeZone = "Africa/Cairo";
 }
