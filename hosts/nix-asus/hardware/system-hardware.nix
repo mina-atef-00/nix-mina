@@ -30,25 +30,19 @@
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
   hardware.bluetooth.enable = true;
 
-  # NVIDIA graphics drivers for RTX 2060
- hardware.graphics = {
+  hardware.graphics = {
     enable = true;
-    enable32Bit = true; # For gaming compatibility
+    enable32Bit = true;
   };
 
   hardware.nvidia = {
     modesetting.enable = true;
-    open = false; # Use proprietary driver for full RTX 2060 features
+    open = false;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
-    # Enable for better Wayland support
     forceFullCompositionPipeline = true;
-    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
     powerManagement.enable = false;
-    # Fine-grained power management. Turns off GPU when not in use.
-    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
     powerManagement.finegrained = false;
-
   };
 
   hardware.enableRedistributableFirmware = true;
