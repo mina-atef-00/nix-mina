@@ -4,7 +4,7 @@
   users.users = {
     "mina" = {
       isNormalUser = true;
-      shell = fish;
+      shell = pkgs.fish;
       extraGroups = [
         "networkmanager"
         "wheel"
