@@ -25,4 +25,22 @@
 
 
   # Additional program-related configurations that don't fit under programs.*
+  
+  # Install packages that might help with Wayland/Mango compatibility
+  environment.systemPackages = with pkgs; [
+    # Wayland utilities
+    wayland-utils
+    wlr-randr
+    swaybg
+    swaylock
+    swayidle
+    
+    # Graphics and rendering
+    mesa
+    vulkan-tools
+    glxinfo
+    
+    # Additional Wayland protocols support
+    xdg-utils
+  ];
 }
