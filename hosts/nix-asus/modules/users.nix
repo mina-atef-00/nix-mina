@@ -19,7 +19,7 @@
 
   # Keyboard settings
   services.xserver = {
-    xkbOptions = "grp:win_space_toggle";
+    xkb.options = "grp:win_space_toggle";
     xkb.layout = "us,ara";
   };
 
