@@ -296,23 +296,9 @@
                   drag_tile_to_tile=1
 
                   # keyboard
-                  repeat_rate=25
-                  repeat_delay=600
-                  numlockon=0
+                  numlockon=1
                   xkb_rules_layout=us,ara
                   xkb_rules_options=grp:win_space_toggle
-
-                  # Trackpad
-                  # need relogin to make it apply
-                  disable_trackpad=0
-                  tap_to_click=1
-                  tap_and_drag=1
-                  drag_lock=1
-                  trackpad_natural_scrolling=0
-                  disable_while_typing=1
-                  left_handed=0
-                  middle_button_emulation=0
-                  swipe_min_threshold=1
 
                   # mouse
                   # need relogin to make it apply
@@ -444,11 +430,10 @@
 
                   # Environment variables
                   env=XCURSOR_SIZE,24
-                  env=XCURSOR_THEME,catppuccin-mocha-dark-cursors
                   
                   # Additional environment variables for theming
-                  env=GTK_THEME,Catppuccin-Mocha-Standard-Blue-Dark
-                  env=ICON_THEME,catppuccin-mocha-blue-standard
+                  # env=GTK_THEME,Catppuccin-Mocha-Standard-Blue-Dark
+                  # env=ICON_THEME,catppuccin-mocha-blue-standard
                   
                   # Exec commands
                   exec-once=swaybg -i /home/mina/Pictures/wallpaper.jpg
@@ -530,12 +515,6 @@
                 # Additional environment variables for NVIDIA/Wayland compatibility
                 WLR_NO_HARDWARE_CURSORS = "1";
                 WLR_RENDERER_ALLOW_SOFTWARE = "1";
-                # Keyboard layout settings
-                XKB_DEFAULT_LAYOUT = "us,ara";
-                XKB_DEFAULT_OPTIONS = "grp:win_space_toggle";
-                # Additional variables to help with Wayland keyboard issues
-                WAYLAND_KEYBOARD_REPEAT_DELAY = "400";
-                WAYLAND_KEYBOARD_REPEAT_RATE = "40";
               };
             };
           };
