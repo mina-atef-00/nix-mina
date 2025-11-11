@@ -3,11 +3,13 @@
 {
   imports = [
     # Import modular configuration files
+    ./hardware/system-hardware.nix
+    ./hardware/boot.nix
+    ./hardware/networking.nix
+    ./hardware/keyboard.nix
     ./modules/packages.nix
-    ./modules/networking.nix
     ./modules/services.nix
     ./modules/users.nix
-    ./modules/boot.nix
     ./modules/system.nix
   ];
 

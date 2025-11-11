@@ -16,13 +16,4 @@
 
     root.hashedPassword = "$6$rounds=4096$ZndMwux/UG4xJ6G/$mPu2hJDUbskiuagCddmnd3cogdNgpDk1z9LBWaTOeG8he90oWGW0qgqqGiVUSAxyiQaxheCm4sNrDqroguiCQ1";
   };
-
-  # Keyboard settings
-  services.xserver = {
-    xkb.options = "grp:win_space_toggle";
-    xkb.layout = "us,ara";
-  };
-
-  console.keyMap = "us";
-  i18n.defaultLocale = "en_US.UTF-8";
 }
