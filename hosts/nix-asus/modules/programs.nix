@@ -20,8 +20,6 @@
     # Enable and configure other programs as needed
     # Add more program configurations here as needed
     fish.enable = true;
-
-
   };
 
 # Additional program-related configurations that don't fit under programs.*
