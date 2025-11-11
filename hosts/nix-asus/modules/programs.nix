@@ -2,7 +2,7 @@
 
 {
   # Programs configuration
-  programs = {
+ programs = {
     # Git configuration
     git = {
       enable = true;
@@ -16,6 +16,10 @@
         };
       };
     };
+
+    # Mango compositor configuration
+    # Note: Mango is enabled in the flake.nix file as a NixOS module
+    # Configuration for Mango can be set here if needed
 
     # Enable and configure other programs as needed
     # Add more program configurations here as needed
