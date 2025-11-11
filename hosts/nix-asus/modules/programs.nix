@@ -19,9 +19,8 @@
 
     # Enable and configure other programs as needed
     # Add more program configurations here as needed
+    fish.enable = true;
 
-
-      # Fish shell configuration
 
   };
 
