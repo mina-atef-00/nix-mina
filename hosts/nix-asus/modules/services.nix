@@ -30,6 +30,8 @@
     wayland.enable = true;
   };
 
+  services.printing.enable = false;
+
   # Timezone
   time.timeZone = "Africa/Cairo";
 }
