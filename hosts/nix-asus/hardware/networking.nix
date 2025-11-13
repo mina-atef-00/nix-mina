@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   networking = {
     hostName = "nix-asus";
@@ -15,5 +13,5 @@
   services.avahi = {
     enable = true;
     nssmdns4 = true;
- };
+  };
 }

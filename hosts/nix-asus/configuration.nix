@@ -1,4 +1,7 @@
-{ config, pkgs, nixpkgs-stable, nixpkgs-unstable, ... }:
+{
+  nixpkgs-unstable,
+  ...
+}:
 
 {
   imports = [
@@ -16,10 +19,12 @@
 
   # Use both stable and unstable packages
   nixpkgs.overlays = [
-    (final: prev: {
+    (_final: prev: {
       unstable = import nixpkgs-unstable {
         inherit (prev) system;
-        config = { allowUnfree = true; };
+        config = {
+          allowUnfree = true;
+        };
       };
     })
   ];

@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -70,7 +70,7 @@
 
     # Additional libraries for better compatibility
     xorg.xorgserver
-    
+
     xorg.libXcursor
     xorg.libXi
     xorg.libXinerama
@@ -190,8 +190,8 @@
     inter
     # Example of using unstable packages (uncomment to use):
     # pkgs.unstable.somePackage
- ];
-  
+  ];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 }
