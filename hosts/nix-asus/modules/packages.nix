@@ -43,6 +43,7 @@
     gcc
     gnumake
     cmake
+    glibc
     plymouth
 
     # Media and graphics
@@ -93,12 +94,22 @@
     inxi
     killall
     libnotify
+    libdrm
     lshw
     ncdu
     nixfmt-rfc-style
     nixd
     nil
     sox
+    libxkbcommon
+    pixman
+    meson
+    ninja
+    hwdata
+    seatd
+    libliftoff
+    pcre2
+    libdisplay-info
     usbutils
     v4l-utils
     gum
