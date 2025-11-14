@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 
 {
   # Audio services
@@ -30,7 +30,7 @@
       enable = true;
       settings = {
         default_session = {
-          command = "${config.pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --time-format '%A, %d %B %Y - %I:%M %p' --greeting 'Hello mina' --greet-align center --remember-session --cmd mango";
           user = "greeter";
         };
       };
