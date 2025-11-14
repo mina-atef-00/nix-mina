@@ -25,12 +25,14 @@
       };
     };
 
-    # Display manager - using Ly instead of SDDM
-    ly = {
+    # Display manager - using greetd with tuigreet instead of Ly
+    greetd = {
       enable = true;
       settings = {
-        # Configure Ly to work with MangoWM
-        wayland.enable = true;
+        default_session = {
+          command = "${config.pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
+          user = "greeter";
+        };
       };
     };
 

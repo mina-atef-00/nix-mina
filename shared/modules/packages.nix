@@ -33,8 +33,9 @@
     libinput
     kitty
     zellij
+
     # Display manager
-    ly
+    greetd.tuigreet
 
     # Development tools
     nodejs
