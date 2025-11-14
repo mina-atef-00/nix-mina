@@ -38,7 +38,7 @@
     bluetooth.enable = true;
     graphics = {
       enable = true;
-      enable32Bit = true;
+      enable32Bit = true; # Updated from deprecated driSupport32Bit
     };
     nvidia = {
       modesetting.enable = true;

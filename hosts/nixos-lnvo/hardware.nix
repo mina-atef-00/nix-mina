@@ -35,13 +35,7 @@
     # Intel GPU configuration (no NVIDIA)
     graphics = {
       enable = true;
-      enable32Bit = true;
-    };
-
-    # Intel GPU specific settings - removed deprecated driSupport option
-    opengl = {
-      enable = true;
-      driSupport32Bit = true;
+      enable32Bit = true; # Updated from deprecated driSupport32Bit
     };
 
     enableRedistributableFirmware = true;
