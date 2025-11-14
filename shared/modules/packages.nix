@@ -33,6 +33,8 @@
     libinput
     kitty
     zellij
+    # Display manager
+    ly
 
     # Development tools
     nodejs

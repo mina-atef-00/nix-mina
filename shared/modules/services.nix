@@ -16,12 +16,21 @@
     # SSH server - using port 2200 as requested
     openssh = {
       enable = true;
-      ports = [ 220 ];
+      ports = [ 2200 ]; # DO NOT CHANGE THE PORT IN THE FUTURE
       settings = {
         PasswordAuthentication = true;
         PermitRootLogin = "no";
         PubkeyAuthentication = true;
         PermitEmptyPasswords = false;
+      };
+    };
+
+    # Display manager - using Ly instead of SDDM
+    ly = {
+      enable = true;
+      settings = {
+        # Configure Ly to work with MangoWM
+        wayland.enable = true;
       };
     };
 
