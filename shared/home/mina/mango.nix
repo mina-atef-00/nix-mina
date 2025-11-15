@@ -229,22 +229,21 @@
       # env=ICON_THEME,catppuccin-mocha-blue-standard
 
       # Exec commands
-      exec-once=swaybg -i /home/mina/Pictures/wallpaper.jpg
+      # Removed swaybg since DankMaterialShell handles wallpaper
     '';
     autostart_sh = ''
-      # Autostart commands
+      # Autostart commands for Mango with DankMaterialShell
 
-      # Notification daemon
-      swaync &
-
-      # Status bar
-      waybar &
-
-      # Clipboard manager
+      # Clipboard manager (needed for DankMaterialShell)
       wl-clipboard &
 
-      # Wallpaper
-      swaybg -i /home/mina/Pictures/wallpaper.jpg &
+      # Start DankMaterialShell services after mango
+      sleep 2
+      dms run &
+
+      # Start clipboard history if enabled in DMS
+      sleep 2
+      wl-paste --watch cliphist store &
 
       # Other startup applications can be added here
     '';

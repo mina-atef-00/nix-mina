@@ -156,6 +156,11 @@
     slurp
     swappy
 
+    # DankMaterialShell dependencies
+    cliphist
+    matugen
+    cava
+
     # GTK themes
     colloid-gtk-theme
 

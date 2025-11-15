@@ -12,6 +12,19 @@
       url = "github:DreamMaoMao/mango";
       inputs.nixpkgs.follows = "nixpkgs-stable";
     };
+    dgop = {
+      url = "github:AvengeMedia/dgop";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
+    };
+    dankMaterialShell = {
+      url = "github:AvengeMedia/DankMaterialShell";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
+      inputs.dgop.follows = "dgop";
+    };
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
+    };
   };
 
   outputs =
@@ -20,6 +33,8 @@
       nixpkgs-unstable,
       home-manager,
       mango,
+      dankMaterialShell,
+      quickshell,
       ...
     }:
     {
@@ -31,6 +46,8 @@
             nixpkgs-unstable
             home-manager
             mango
+            dankMaterialShell
+            quickshell
             ;
         };
         modules = [
@@ -67,6 +84,7 @@
                   ./shared/home/mina/direnv.nix
                   ./shared/home/mina/neovim.nix
                   mango.hmModules.mango
+                  dankMaterialShell.homeModules.dankMaterialShell.default
                 ];
 
                 # The home.stateVersion option does not have a default and must be set
@@ -131,6 +149,25 @@
                   WLR_NO_HARDWARE_CURSORS = "1";
                   WLR_RENDERER_ALLOW_SOFTWARE = "1";
                 };
+
+                # Enable DankMaterialShell
+                programs.dankMaterialShell = {
+                  enable = true;
+                  enableSystemMonitoring = true;
+                  enableClipboard = true;
+                  enableVPN = false;
+                  enableBrightnessControl = true;
+                  enableColorPicker = true;
+                  enableDynamicTheming = true;
+                  enableAudioWavelength = true;
+                  enableCalendarEvents = false;
+                  enableSystemSound = true;
+                  systemd = {
+                    enable = true;
+                    restartIfChanged = true;
+                  };
+                  quickshell.package = quickshell.packages."x86_64-linux".default;
+                };
               };
             };
           }
@@ -145,6 +182,8 @@
             nixpkgs-unstable
             home-manager
             mango
+            dankMaterialShell
+            quickshell
             ;
         };
         modules = [
@@ -182,6 +221,7 @@
                   ./shared/home/mina/direnv.nix
                   ./shared/home/mina/neovim.nix
                   mango.hmModules.mango
+                  dankMaterialShell.homeModules.dankMaterialShell.default
                 ];
 
                 # The home.stateVersion option does not have a default and must be set
@@ -242,6 +282,25 @@
                   SDL_VIDEODRIVER = "wayland";
                   _JAVA_AWT_WM_NONREPARENTING = "1";
                   NIXOS_OZONE_WL = "1";
+                };
+
+                # Enable DankMaterialShell
+                programs.dankMaterialShell = {
+                  enable = true;
+                  enableSystemMonitoring = true;
+                  enableClipboard = true;
+                  enableVPN = false;
+                  enableBrightnessControl = true;
+                  enableColorPicker = true;
+                  enableDynamicTheming = true;
+                  enableAudioWavelength = true;
+                  enableCalendarEvents = false;
+                  enableSystemSound = true;
+                  systemd = {
+                    enable = true;
+                    restartIfChanged = true;
+                  };
+                  quickshell.package = quickshell.packages."x86_64-linux".default;
                 };
               };
             };
