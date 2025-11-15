@@ -9,4 +9,11 @@
     "nix-command"
     "flakes"
   ];
+
+  # Bootloader - Using GRUB for all systems
+  boot.loader.grub = {
+    enable = true;
+    efiSupport = true;
+    device = "nodev";
+  };
 }

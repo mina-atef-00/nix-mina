@@ -51,11 +51,4 @@
     };
     enableRedistributableFirmware = true;
   };
-
-  # Bootloader - GRUB for desktop as requested
-  boot.loader.grub = {
-    enable = true;
-    efiSupport = true;
-    device = "nodev";
-  };
 }

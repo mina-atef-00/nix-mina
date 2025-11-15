@@ -41,13 +41,6 @@
     enableRedistributableFirmware = true;
   };
 
-  # Changed to GRUB for laptop as requested
-  boot.loader.grub = {
-    enable = true;
-    efiSupport = true;
-    device = "nodev";
-  };
-
   # ZRAM swap - fixed to use single attribute set as requested by statix
   zramSwap = {
     enable = true;
