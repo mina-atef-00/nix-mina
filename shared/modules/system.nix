@@ -17,6 +17,6 @@
     device = "nodev";
   };
 
-  # Explicitly disable systemd-boot to prevent conflicts
-  boot.loader.systemd-boot.enable = false;
+  # Set bootloader timeout
+  boot.loader.timeout = 5; # 5 second timeout before booting default entry
 }

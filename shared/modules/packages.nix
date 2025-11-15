@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -34,7 +34,6 @@
     kitty
     zellij
     # Bluetooth support
-    bluez
     bluez-tools
     blueman
 
@@ -56,7 +55,6 @@
     gnome-disk-utility
     ente-auth
     qalculate-gtk
-    ventoy
 
     vscode
     warpinator
@@ -79,7 +77,7 @@
     imagemagick
 
     # Browsers
-    firefox
+    inputs.zen-browser.packages.${pkgs.system}.default
 
     # Communication
     vesktop
@@ -116,7 +114,6 @@
     duf
     dysk
     file-roller
-    ristretto
     inxi
     killall
     libnotify
@@ -160,6 +157,7 @@
     xfce.thunar-volman
     xfce.thunar-archive-plugin
     xfce.tumbler
+    xfce.ristretto
 
     # File management
     p7zip

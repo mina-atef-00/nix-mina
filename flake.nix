@@ -25,6 +25,10 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs-stable";
     };
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
+    };
   };
 
   outputs =
@@ -35,8 +39,9 @@
       mango,
       dankMaterialShell,
       quickshell,
+      zen-browser,
       ...
-    }:
+    }@inputs:
     {
       nixosConfigurations.nix-asus = nixpkgs-stable.lib.nixosSystem {
         system = "x86_64-linux";
@@ -48,6 +53,8 @@
             mango
             dankMaterialShell
             quickshell
+            zen-browser
+            inputs
             ;
         };
         modules = [
@@ -184,6 +191,8 @@
             mango
             dankMaterialShell
             quickshell
+            zen-browser
+            inputs
             ;
         };
         modules = [
