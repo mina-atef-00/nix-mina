@@ -30,7 +30,7 @@
       enable = true;
       settings = {
         default_session = {
-          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --time-format '%A, %d %B %Y - %I:%M %p' --greeting 'Hello mina' --greet-align center --remember-session --user mina --cmd mango";
+          command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --time-format '%A, %d %B %Y - %I:%M %p' --greeting 'Hello mina' --greet-align center --remember-session --remember-user-session --cmd mango";
           user = "greeter";
         };
       };
