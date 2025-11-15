@@ -48,6 +48,8 @@
     };
 
     printing.enable = false; # Set to false as requested
+    # Power management profiles daemon
+    power-profiles-daemon.enable = true;
   };
 
   # Timezone

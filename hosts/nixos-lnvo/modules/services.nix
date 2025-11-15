@@ -2,9 +2,6 @@
 
 {
   services = {
-    # Power management for laptop
-    power-profiles-daemon.enable = true;
-
     logind = {
       lidSwitch = "suspend";
       lidSwitchExternalPower = "suspend";
