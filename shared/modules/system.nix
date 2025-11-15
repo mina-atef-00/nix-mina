@@ -16,4 +16,7 @@
     efiSupport = true;
     device = "nodev";
   };
+
+  # Explicitly disable systemd-boot to prevent conflicts
+  boot.loader.systemd-boot.enable = false;
 }
