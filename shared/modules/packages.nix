@@ -6,7 +6,7 @@
     git
     wget
     curl
-    vim
+    neovim
     htop
     bottom
     ripgrep
@@ -33,10 +33,33 @@
     libinput
     kitty
     zellij
+    # Bluetooth support
+    bluez
+    bluez-tools
+    blueman
 
     # Display manager
     greetd.tuigreet
 
+    # System utilities
+    efibootmgr
+    # Additional requested packages
+    qbittorrent
+    chromium
+    telegram-desktop
+    tor-browser
+    audacity
+    handbrake
+    picard
+    syncplay
+    xarchiver
+    gnome-disk-utility
+    ente-auth
+    qalculate-gtk
+    ventoy
+
+    vscode
+    warpinator
     # Development tools
     nodejs
     nodePackages.npm
@@ -93,7 +116,7 @@
     duf
     dysk
     file-roller
-    eog
+    ristretto
     inxi
     killall
     libnotify

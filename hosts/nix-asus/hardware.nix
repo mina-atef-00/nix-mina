@@ -50,5 +50,14 @@
       powerManagement.finegrained = false;
     };
     enableRedistributableFirmware = true;
+    # Bootloader configuration
+    boot.loader.grub = {
+      enable = true;
+      efiSupport = true;
+      device = "nodev";
+      # Hide GRUB menu by default, only show when key is pressed
+      hideTimeout = true;
+      timeout = 5; # 5 second timeout before booting default entry
+    };
   };
 }

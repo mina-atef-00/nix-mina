@@ -39,6 +39,13 @@
     };
 
     enableRedistributableFirmware = true;
+    # Input device configuration for laptop trackpad
+    services.libinput = {
+      enable = true;
+      touchpad = {
+        naturalScrolling = true;
+      };
+    };
   };
 
   # ZRAM swap - fixed to use single attribute set as requested by statix
